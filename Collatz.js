@@ -1,15 +1,19 @@
-const size = 16
-const curvyness = -343
+//Play with these variables to change the look!
+
+const SIZE = 3
+const CURVYNESS = -7
+const COUNT = 250
 
 function collatz(n, t) {
-    t.forward(size)
+    t.forward(SIZE)
     if (n % 2 === 0) {
-        t.left(curvyness)
+        t.left(CURVYNESS)
         return (n / 2)
     } else {
-        t.right(curvyness)
+        t.right(CURVYNESS)
         return (3*n + 1)
     }
+   
 }
 
 function runCollatz(n) {
@@ -21,6 +25,6 @@ function runCollatz(n) {
     drawLines(t.lines())
 }
 
-for (let i = 1; i <= 100; i++) {
-    runCollatz(i * Math.random); 
+for (let i = 1; i <= COUNT; i++) {
+    runCollatz(i); 
 }
