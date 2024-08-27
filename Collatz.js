@@ -1,25 +1,29 @@
 //Play with these variables to change the look!
 
 const SIZE = 3
-const CURVYNESS = 1873
-const COUNT = 121
-const MOD = 2 // Integar, range between 0 & 2
+const CURVYNESS = -115
+const COUNT = 671
+const CURVEMOD = 1 // Integar, range between 0 & 1
+const LENMOD = 2 // Integar, range between 0 & 2
+
 
 function collatz(n, t) {
-    if (MOD === 0) {
-          t.forward(SIZE)
-    } else if (MOD === 2) {
-          t.forward(SIZE * n)
+    if (LENMOD === 1) {
+      t.forward(SIZE * n)
+    } else if (LENMOD === 2) {
+       t.forward(SIZE / n)
+    } else {
+      t.forward(SIZE)
     }
     if (n % 2 === 0) {
-        if (MOD === 1) {
+        if (CURVEMOD === 1) {
           t.left(CURVYNESS / Math.sqrt(n))
         } else {
           t.left(CURVYNESS)
         }
         return (n / 2)
     } else {
-        if (MOD === 1) {
+        if (CURVEMOD === 1) {
           t.right(CURVYNESS / Math.sqrt(n))
         } else {
           t.right(CURVYNESS)
