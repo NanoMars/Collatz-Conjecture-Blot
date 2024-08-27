@@ -1,16 +1,16 @@
 //Play with these variables to change the look!
 
 const SIZE = 3
-const CURVYNESS = -7
-const COUNT = 250
+const CURVYNESS = 1451
+const COUNT = 854
 
 function collatz(n, t) {
     t.forward(SIZE)
     if (n % 2 === 0) {
-        t.left(CURVYNESS)
+        t.left(CURVYNESS / Math.sqrt(n))
         return (n / 2)
     } else {
-        t.right(CURVYNESS)
+        t.right(CURVYNESS / Math.sqrt(n))
         return (3*n + 1)
     }
    
