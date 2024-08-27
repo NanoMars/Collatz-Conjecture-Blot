@@ -3,7 +3,7 @@
 const SIZE = 3
 const CURVYNESS = -115
 const COUNT = 671
-const CURVEMOD = 1 // Integar, range between 0 & 1
+const CURVEMOD = 2 // Integar, range between 0 & 2
 const LENMOD = 2 // Integar, range between 0 & 2
 
 
@@ -18,6 +18,8 @@ function collatz(n, t) {
     if (n % 2 === 0) {
         if (CURVEMOD === 1) {
           t.left(CURVYNESS / Math.sqrt(n))
+        } else if (CURVEMOD === 2) {
+          t.left(CURVYNESS * n)
         } else {
           t.left(CURVYNESS)
         }
@@ -25,6 +27,8 @@ function collatz(n, t) {
     } else {
         if (CURVEMOD === 1) {
           t.right(CURVYNESS / Math.sqrt(n))
+        } else if (CURVEMOD === 2) {
+          t.right(CURVYNESS * n)
         } else {
           t.right(CURVYNESS)
         }
