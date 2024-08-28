@@ -1,7 +1,7 @@
 /*
 @title: The Collatz conjecture
 @author: Armand
-@snapshot: Base-Visualisation
+@snapshot: the name of the snapshot file you want in the gallery
 */
 
 const width = 125;
@@ -13,21 +13,21 @@ setDocDimensions(width, height);
 //Play with these variables to change the look!
 let collatzs = [
     {
-        SIZE: -8,
-        CURVYNESS: -18,
-        COUNT: 9,
+        SIZE: -38,
+        CURVYNESS: 90,
+        COUNT: 3,
         CURVEMOD: 0, // Integer, range between 0 & 2. Changes the way the curve is calculated
         LENMOD: 0, // Integer, range between 0 & 2. Changes how length is calculated
-        X: 10,
+        X: 1,
         Y: 0
     },
     {
-        SIZE: -25,
-        CURVYNESS: -60,
+        SIZE: -18,
+        CURVYNESS: 45,
         COUNT: 5,
         CURVEMOD: 0, // Integer, range between 0 & 2. Changes the way the curve is calculated
         LENMOD: 0, // Integer, range between 0 & 2. Changes how length is calculated
-        X: 101,
+        X: 82,
         Y: 1
     },
     // Copy and paste the above variables to add more patterns to the page!
